@@ -21,7 +21,7 @@ serialInst.port = use
 serialInst.open()
 
 while True:
-    command = input("Arduino Command (ON/OFF/exit): ")
+    command = input("Arduino Command (ON/OFF/กระพริบ/exit): ")
     serialInst.write(command.encode('utf-8'))
 
     if command == 'exit':

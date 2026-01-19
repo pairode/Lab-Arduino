@@ -19,6 +19,21 @@ void loop() {
     else if (msg == "OFF"){
       digitalWrite(greenPin, LOW);
     }
+    else if (msg == "กระพริบ"){
+      for (int i = 0; i < 5; i++){
+        digitalWrite(greenPin, HIGH);
+        delay(1000);
+        digitalWrite(greenPin, LOW);
+        delay(1000);
+      }
+    }
+    else {
+      digitalWrite(greenPin, LOW);
+        delay(1000);
+      while(1);
+    }
+
+/*
     else {
       for (int i = 0; i < 5; i++){
         digitalWrite(greenPin, HIGH);
@@ -27,6 +42,11 @@ void loop() {
         delay(1000);
       }
     }
+*/
+    
+    
+
+
   }
 }
 

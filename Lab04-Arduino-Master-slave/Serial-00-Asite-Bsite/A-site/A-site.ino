@@ -20,8 +20,8 @@ You can one way between the two boards
 */
 
 // Sender Arduino
-#define senderID "AAA:"
-#define forRecCode "BBB:"
+#define senderID "A:"
+#define forRecCode "B:"
 
 String msg;
 void setup() {
@@ -33,7 +33,7 @@ void loop() {
   delay(500);
   if(   (Serial.available())   && (msg = Serial.readStringUntil('\n'))  && (msg.startsWith(senderID)) ){
     //Serial.print("In my term 4 send ==> ");
-    Serial.println(msg.substring(4)); // Send a string
+    Serial.println(msg.substring(2)); // Send a string
     delay(1000); // Wait for 1 second
   }
 }
